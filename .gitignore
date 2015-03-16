@@ -5,6 +5,9 @@
 *.suo
 *.user
 *.sln.docstates
+#vim temp files
+**/*~
+*~
 
 # Build results
 [Dd]ebug/
@@ -17,10 +20,7 @@ build/
 bld/
 [Bb]in/
 [Oo]bj/
-<<<<<<< HEAD
 [Ll]ib/
-=======
->>>>>>> c2a327f4d7ee108bc8723a872790731dd7f63dfb
 
 # Roslyn cache directories
 *.ide/

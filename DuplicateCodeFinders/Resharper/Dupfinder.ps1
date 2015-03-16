@@ -12,12 +12,12 @@ $xsl ="$scriptPath\dupfinder.xsl"
 $dupFinder = "$scriptPath\..\..\Lib\Resharper\CLI\Dupfinder.exe"
 $discards = ("/discard-fields=$false", "/discard-literals=$true", "/discard-local-vars=$false", "/discard-cost=$discardcost")
 
-if(Test-Path $dupFinder){
+if(!(Test-Path $dupFinder)){
   Write-Host $dupFInder "is not found. Download Resharper API. By convention, this script expects under ..\Resharper\CLI. Update this script with the right path if it's at different location"
   exit -1
 }
 
-function TransforXml ($xmlFile,$xslFile,$output)
+function TransformXml ($xmlFile,$xslFile,$output)
 {
 	$uri = New-Object System.Uri($xslFile)
 	[string]$xslUri = $uri.AbsoluteUri
